@@ -1,0 +1,26 @@
+[package]
+name = "root"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "0.5.3"
+chrono = { version = "0.4.38", features = ["serde"] }
+diesel = { version = "2.2.1", features = ["postgres", "r2d2"] }
+diesel-derive-enum = { version = "2.1.0", features = ["postgres"] }
+diesel_migrations = "2.2.0"
+dotenv = "0.15.0"
+env_logger = "0.11.3"
+jsonwebtoken = "9.3.0"
+log = "0.4.21"
+prost = "0.12.6"
+prost-types = "0.12.6"
+redis = { version = "0.25.4", features = ["tokio-comp"] }
+serde = { version = "1.0.203", features = ["derive"] }
+tokio = { version = "1.38.0", features = ["macros", "sync", "rt-multi-thread"] }
+tonic = { version = "0.11.0", features = ["tls"] }
+tonic-reflection = "0.11.0"
+uuid = { version = "1.8.0", features = ["serde", "v4"] }
+
+[build-dependencies]
+tonic-build = "0.11.0"
